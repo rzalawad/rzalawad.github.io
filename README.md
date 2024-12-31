@@ -1,11 +1,5 @@
----
-title: ""
-permalink: "/about/"
-layout: page
----
-
-
-Hi, my name is Ridham (pronounced Rhythm like rhythm of the music) Zalawadia.
+Hi, my name is Ridham (pronounced Rhythm like rhythm of the music) Zalawadia. Some say my typing
+has a certain rhythm to it 😆.
 
 I graduated with a BS in Computer Science from California Polytechnic State University San Luis Obispo.
 
