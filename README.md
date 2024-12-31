@@ -20,4 +20,4 @@ I use this blog to
 
 If you have any feedback for the blog, please open a github issue.
 If you would like to reach out to me regarding anything else, please reach out at
-"<github_profile_name> at protonmail.com"
+"github_profile_name at protonmail dot com"
