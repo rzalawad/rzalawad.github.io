@@ -1,0 +1,63 @@
+// @use 'dark';
+@import 'dark';
+
+@mixin prompt($type, $fa-content, $fa-style: 'solid', $rotate: 0) {
+
+  &.prompt-#{$type} {
+    background-color: var(--prompt-#{$type}-bg);
+
+    &::before {
+      content: $fa-content;
+      color: var(--prompt-#{$type}-icon-color);
+      font: var(--fa-font-#{$fa-style});
+      font-family: "FontAwesome", sans-serif;  
+
+      @if $rotate != 0 {
+        transform: rotate(#{$rotate}deg);
+      }
+    }
+  }
+}
+
+%rounded {
+  border-radius: 10px;
+}
+
+blockquote {
+  @include styles;
+
+  border-left: 0.125rem solid var(--blockquote-border-color);
+  padding-left: 1rem;
+  color: var(--blockquote-text-color);
+  margin-top: 0.5rem;
+  @extend %rounded;
+
+  > p:last-child {
+    margin-bottom: 0;
+    padding-top: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  &[class^='prompt-'] {
+    border-left: 0;
+    position: relative;
+    padding: 0.00rem 0.5rem 0.5rem 2.2rem;
+    color: var(--prompt-text-color);
+
+    &::before {
+      text-align: center;
+      width: 1.5rem;
+      position: absolute;
+      left: 0.5rem;
+      top: 0.5rem;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+    }
+  }
+
+  @include prompt('tip', '\f0eb', $fa-style: 'regular');
+  @include prompt('info', '\f06a', $rotate: 180);
+  @include prompt('warning', '\f06a');
+  @include prompt('danger', '\f071');
+}
+
