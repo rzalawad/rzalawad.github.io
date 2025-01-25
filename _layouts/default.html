@@ -11,6 +11,8 @@
 {% else %}
 <link rel="stylesheet" href="{{ "/assets/css/index.css" | relative_url }}">
 {% endif %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
 {% if site.plugins contains "jekyll-feed" %}<link rel="alternate" href="{{ site.feed.path | default: "/feed.xml" | relative_url }}" type="application/atom+xml" title="{{ site.title }}">{% endif %}
 {% if page.mathjax or site.mathjax %}
 <link rel="stylesheet" href="{{ "/assets/katex/katex.min.css" | relative_url }}">
